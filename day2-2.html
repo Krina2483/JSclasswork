@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<table>
+		<tr>
+			<td colspan="4">
+				<input type="text" name="" id="ans">
+			</td>
+		</tr>
+		<tr>
+			<td><input type="button" onclick="appendNumber(this)" value="7" /></td>
+			<td><input type="button" onclick="appendNumber(this)" value="8" /></td>
+			<td><input type="button" onclick="appendNumber(this)" value="9" /></td>
+			<td><input type="button" onclick="appendNumber(this)" value="+" /></td>
+		</tr>
+		<tr>
+			<td><input type="button" onclick="appendNumber(this)" value="4" /></td>
+			<td><input type="button" onclick="appendNumber(this)" value="5" /></td>
+			<td><input type="button" onclick="appendNumber(this)" value="6" /></td>
+			<td><input type="button" onclick="appendNumber(this)" value="-" /></td>
+		</tr>
+		<tr>
+			<td><input type="button" onclick="appendNumber(this)" value="1" /></td>
+			<td><input type="button" onclick="appendNumber(this)" value="2" /></td>
+			<td><input type="button" onclick="appendNumber(this)" value="3" /></td>
+			<td><input type="button" onclick="appendNumber(this)" value="*" /></td>
+		</tr>
+		<tr>
+			<td><input type="button" value="." /></td>
+			<td><input type="button" onclick="appendNumber(this)" value="0" /></td>
+			<td><input type="button" value="=" onclick="calculate()" /></td>
+			<td><input type="button" onclick="appendNumber(this)" value="/" /></td>
+		</tr>
+	</table>
+
+	<script type="text/javascript">
+		function appendNumber(n){
+			document.getElementById("ans").value += n.value;
+		}
+
+		function calculate(){
+			n =document.getElementById("ans").value;
+			ans = eval(n);
+			document.getElementById("ans").value = ans;
+		}
+	</script>
+</body>
+</html>

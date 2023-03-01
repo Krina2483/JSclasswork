@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body onload="startChangeBackgroud()" id="mainBody" style="background-color: red;">
+	<script type="text/javascript">
+		function startChangeBackgroud(){
+			setInterval(changeBackgroud,500);
+		}
+		function changeBackgroud(){
+			b = document.getElementById("mainBody");
+			redColor = parseInt(Math.random()*255);
+			greenColor = parseInt(Math.random()*255);
+			blueColor = parseInt(Math.random()*255);
+			b.style.backgroundColor = "rgb("+redColor+","+greenColor+","+blueColor+")";
+		}
+	</script>
+</body>
+</html>

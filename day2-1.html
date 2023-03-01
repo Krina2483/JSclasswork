@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>old title</title>
+	<style type="text/css">
+		#ansH1{
+			color: red;
+			
+		}
+	</style>
+</head>
+<body>
+	<input type="text"  id="para1" />
+	<input type="text"  id="para2" />
+
+	<input type="button" value="+" onclick="add()">
+	<input type="button" value="-" onclick="sub()">
+
+	<br/>
+	<h1 id="ansH1"></h1>
+	
+	<script type="text/javascript">
+		function add(){
+			n1 = parseInt(document.getElementById("para1").value);
+			n2 = parseInt(document.getElementById("para2").value);
+			
+			ans = n1 + n2;
+			document.getElementById("ansH1").innerHTML = ans;
+		}
+
+		function sub(){
+			n1 = parseInt(document.getElementById("para1").value);
+			n2 = parseInt(document.getElementById("para2").value);
+			
+			ans = n1 - n2;
+			document.getElementById("ansH1").innerHTML = ans;
+		}
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Countdown</title>
+</head>
+<body>
+	<input type="text" id="timeInSec">
+	<h1 id="timer"></h1>
+	<input type="button" value="Start" onclick="startCounter()">
+
+	<script type="text/javascript">
+		n = 5;
+		function startCounter(){
+			n = parseInt(document.getElementById("timeInSec").value);
+			c = setInterval(printCounter,1000);
+		}
+
+		function printCounter(){
+			n--;
+			if(n<1){
+				clearInterval(c);
+				document.write("<img src='giphy.gif'/>");
+			}
+			document.getElementById("timer").innerHTML = n;
+		}
+	</script>
+</body>
+</html>

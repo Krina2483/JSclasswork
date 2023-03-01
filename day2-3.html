@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		#ansDiv{
+			border: 1px solid red;
+			width: 50%;
+			height: 50vh;
+			position: fixed;
+			left: 30%;
+			top: 30%;
+		}
+	</style>
+</head>
+<body>
+	
+	<script type="text/javascript">
+		for(i=101;i<159;i++){
+			document.write("<input onclick='checkAtte(this)' type='checkbox' value='"+i+"'> "+ i +" <br/>");
+		}
+		for(i=201;i<259;i++){
+			document.write("<input onclick='checkAtte(this)' type='checkbox' value='"+i+"'> "+ i +" <br/>");
+		}
+		for(i=301;i<359;i++){
+			document.write("<input onclick='checkAtte(this)' type='checkbox' value='"+i+"'> "+ i +" <br/>");
+		}
+		for(i=401;i<459;i++){
+			document.write("<input onclick='checkAtte(this)' type='checkbox' value='"+i+"'> "+ i +" <br/>");
+		}
+	</script>
+
+	<div id="ansDiv"></div>
+
+	<script type="text/javascript">
+		function checkAtte(e){
+			students = document.getElementsByTagName("input");
+			ans = ""
+			for(i=0;i<students.length;i++){
+				if(students[i].checked){
+					ans += students[i].value + ", ";
+				}
+			}
+			document.getElementById("ansDiv").innerHTML = ans;
+		}
+	</script>
+</body>
+</html>
