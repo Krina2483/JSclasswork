@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+
+	<h1 id="myH1" style="height: 500px;" onmousemove="printDetail(event)">Hello</h1>
+
+	<script type="text/javascript">
+		function printDetail(e){
+			document.getElementById('myH1').innerHTML = e.screenX + "-" + e.screenY;
+		}
+	</script>
+</body>
+</html>

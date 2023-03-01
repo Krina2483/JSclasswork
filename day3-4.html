@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body onload="startTakingAtte()" onkeydown="checkAtten(event)">
+	<h1 id="currentRollNo" style="text-align: center;color: red;">101</h1>
+	<div id="outputDiv">
+		
+	</div>
+	<script type="text/javascript">
+		i = 301;
+		function startTakingAtte(){
+			document.getElementById('currentRollNo').innerHTML = i;
+		}
+		function checkAtten(e){
+			if(e.keyCode==13){
+				i++;
+				document.getElementById('currentRollNo').innerHTML = i;
+			}
+			else if(e.keyCode==8){
+
+				document.getElementById('outputDiv').innerHTML += i + ", ";
+				i++;
+				document.getElementById('currentRollNo').innerHTML = i;
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		function sum(n1,n2,n3,nextFun){
+			return nextFun(n1+n2,n3);
+		}
+
+		function mul(n1,n2){
+			return n1 * n2;
+		}
+
+		ans = sum(5,5,4,mul);
+
+		document.write(ans);
+	</script>
+</body>
+</html>
