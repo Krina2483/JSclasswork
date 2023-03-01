@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		// var => function level scope
+		// let => block level scope
+		// const => java final keyword
+
+		// es6 const->let->var
+		
+		function helloWorld(){
+			for(var i=0;i<5;i++){
+				console.log(i);
+			}
+
+			console.log("After Loop = "+i)
+		}
+
+		helloWorld();
+
+		const a = 10;
+		a = 20;
+		console.log(a);
+	</script>
+</body>
+</html>
