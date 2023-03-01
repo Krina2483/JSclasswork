@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		class Student{
+			constructor(name,age){
+				this.name = name;
+				this.age = age;
+			}
+
+			study(){
+				console.log("study",this);
+			}
+		}
+
+		const stu1 = new Student("arjun",92);
+		stu1.name = "new arjun";
+		stu1.study();
+
+		const stu2 = new Student("darshan",29);
+		stu2.study();
+	</script>
+</body>
+</html>

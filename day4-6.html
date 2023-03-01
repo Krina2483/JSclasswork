@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		/*
+		//find method
+		stu = [
+			{name:"arjun",age:92,spi:5.2},
+			{name:"bala",age:55,spi:1.2},
+			{name:"rajkot",age:45,spi:3.5},
+			{name:"gujarat",age:35,spi:8.9},
+			{name:"INDIA",age:25,spi:9.5},
+		]
+
+		ans = stu.find(sObj=>sObj.name=="arjun");
+
+		console.log(ans);*/
+
+		// some/every method
+		/*stu = [
+			{name:"arjun",age:92,spi:5.2},
+			{name:"bala",age:55,spi:1.2},
+			{name:"rajkot",age:45,spi:3.5},
+			{name:"gujarat",age:35,spi:8.9},
+			{name:"INDIA",age:25,spi:9.5},
+		]
+		ans = stu.every(sObj=>sObj.age>90)
+
+		console.log(ans);*/
+
+		// filter method
+		/*stu = [
+			{name:"arjun",age:92,spi:5.2},
+			{name:"bala",age:55,spi:1.2},
+			{name:"rajkot",age:45,spi:3.5},
+			{name:"gujarat",age:35,spi:8.9},
+			{name:"INDIA",age:25,spi:9.5},
+		]
+
+		filterdStudent = stu.filter(sObj=>sObj.spi>9)
+		console.log(filterdStudent);*/
+
+		// forEach method
+		/*stu = [
+			{name:"arjun",age:92,spi:5.2},
+			{name:"bala",age:55,spi:1.2},
+			{name:"rajkot",age:45,spi:3.5},
+			{name:"gujarat",age:35,spi:8.9},
+			{name:"INDIA",age:25,spi:9.5},
+		]
+
+		//old technique
+		for(i=0;i<stu.length;i++){
+			console.log(stu[i].name);
+		}
+
+		//new method
+		stu.forEach(sObj=>console.log("new = "+sObj.name));*/
+
+		//redeuce method
+		/*stu = [
+			{name:"arjun",age:92,spi:5.2},
+			{name:"bala",age:55,spi:1.2},
+			{name:"rajkot",age:45,spi:3.5},
+			{name:"gujarat",age:35,spi:8.9},
+			{name:"INDIA",age:25,spi:9.5},
+		]
+
+		ans = stu.reduce((currentTotal,sObj)=>{
+			return currentTotal+sObj.age;
+		},0);
+
+		console.log(ans);*/
+
+		stu = [
+			{name:"arjun",age:92,spi:5.2},
+			{name:"bala",age:55,spi:1.2},
+			{name:"rajkot",age:45,spi:3.5},
+			{name:"gujarat",age:35,spi:8.9},
+			{name:"INDIA",age:25,spi:9.5},
+		]
+
+		ans = stu.map(sObj=>{
+			temp ="";
+			temp += "<h1 style='color:red'>";
+			temp += sObj.name;
+			temp += "</h1>";
+
+			return temp;
+		});
+
+		ans.forEach(aObj=>{
+			document.write(aObj)
+		})
+	</script>
+</body>
+</html>

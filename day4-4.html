@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		w = ["abc","bcd","def"];
+		x = ["cba","dcb","fed"];
+		y = ["arjun","bala"];
+		z = ["rajkot","gujarat"];
+
+		/*allStu = new Array();
+		for(i=0;i<w.length;i++){
+			allStu.push(w[i]);
+		}
+		for(i=0;i<x.length;i++){
+			allStu.push(x[i]);
+		}*/
+
+		allStu = [...w,"manual",...x,...y,...z];
+		console.log(allStu);
+
+
+		// spread with object
+		a = {
+			name:"arjun",
+			age:92
+		}
+		b = {
+			spi:9.2,
+			email:"arjun.bala@darshan.ac.in"
+		}
+
+		stu = { ...a,...b,name:"new name" }
+		console.log(stu);
+
+	</script>
+</body>
+</html>
